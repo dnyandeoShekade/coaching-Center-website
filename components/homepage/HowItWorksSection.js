@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Reveal from "../common/Reveal";
 
 const processSteps = [
   {
@@ -51,6 +52,7 @@ export default function HowItWorks() {
       {/* Background Decorations */}
       <div className="absolute -left-32 top-40 h-72 w-72 rounded-full bg-[#dcebdc]/40 blur-3xl" />
       <div className="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-[#eadcf1]/40 blur-3xl" />
+      <Reveal>
 
       {/* Header */}
       <div className="relative mx-auto mb-14 max-w-3xl text-center">
@@ -187,6 +189,7 @@ export default function HowItWorks() {
           </button>
         </div>
       </div>
-    </section>
+    </Reveal>
+  </section>
   );
 }

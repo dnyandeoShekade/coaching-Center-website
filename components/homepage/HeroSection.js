@@ -55,7 +55,7 @@ export default function HeroSection() {
             autoAlpha: 1,
             duration: 0.8,
             ease: "bounce.out",
-          }
+          },
         );
       }
 
@@ -73,7 +73,7 @@ export default function HeroSection() {
             duration: 0.6,
             stagger: 0.15,
             ease: "power2.out",
-          }
+          },
         );
       }
 
@@ -93,7 +93,7 @@ export default function HeroSection() {
             duration: 1,
             delay: 0.2,
             ease: "power2.out",
-          }
+          },
         );
 
         // Continuous floating animation
@@ -123,7 +123,7 @@ export default function HeroSection() {
             duration: 1,
             delay: 0.2,
             ease: "power2.out",
-          }
+          },
         );
 
         // Continuous floating animation
@@ -153,7 +153,7 @@ export default function HeroSection() {
             duration: 1,
             delay: 0.1,
             ease: "power2.out",
-          }
+          },
         );
 
         // Subtle breathing animation
@@ -183,7 +183,7 @@ export default function HeroSection() {
               duration: 0.8,
               delay: 0.8 + index * 0.1,
               ease: "back.out(1.7)",
-            }
+            },
           );
 
           // Continuous swaying animation
@@ -200,7 +200,7 @@ export default function HeroSection() {
       // Animate decorative elements with stagger and float
       if (decorativeElementsRef.current) {
         const elements = decorativeElementsRef.current.children;
-        
+
         gsap.fromTo(
           elements,
           {
@@ -216,7 +216,7 @@ export default function HeroSection() {
             stagger: 0.1,
             delay: 0.6,
             ease: "back.out(2)",
-          }
+          },
         );
 
         // Continuous floating and rotation for each element
@@ -237,16 +237,16 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_#fffaf1_0%,_#f8f6ee_38%,_#f2efe2_100%)] text-[#071c18]">
+    <main className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,_#fffaf1_0%,_#f8f6ee_38%,_#f2efe2_100%)] text-[#071c18]">
       <Header />
 
       {/* ================= HERO ================= */}
-      <section className="relative w-full px-4 pt-5 sm:px-6 md:px-8 [perspective:1400px]">
+      <section className="relative w-full px-4 pt-4 sm:px-6 sm:pt-5 md:px-8 [perspective:1400px]">
         <HeroThreeScene />
 
         {/* ================= BADGE ================= */}
         <div ref={badgeRef} className="relative z-30 flex justify-center">
-          <div className="translate-y-0 rounded-full border border-[#f0bfd5] bg-[#f1c4da] px-4 py-2 text-center text-[11px] font-semibold shadow-[0_10px_0_#d8a3bc,0_18px_24px_rgba(47,40,35,0.12)] sm:text-xs">
+          <div className="rounded-full border border-[#f0bfd5] bg-[#f1c4da] px-3.5 py-1.5 text-center text-[11px] font-semibold shadow-[0_8px_0_#d8a3bc,0_14px_20px_rgba(47,40,35,0.12)] sm:px-4 sm:py-2 sm:text-xs sm:shadow-[0_10px_0_#d8a3bc,0_18px_24px_rgba(47,40,35,0.12)]">
             Classes 8th–12th • Competitive Exams • Online & Offline
           </div>
         </div>
@@ -254,16 +254,16 @@ export default function HeroSection() {
         {/* ================= HERO CONTENT ================= */}
         <div
           ref={heroContentRef}
-          className="relative z-30 mx-auto mt-5 max-w-[780px] text-center [transform:translateZ(50px)]"
+          className="relative z-30 mx-auto mt-4 max-w-[780px] text-center sm:mt-5 [transform:translateZ(50px)]"
         >
           {/* Heading */}
-          <h1 className="text-[38px] font-extrabold leading-[0.98] tracking-[-2px] text-[#0b1e18] drop-shadow-[0_3px_0_rgba(255,255,255,0.8)] sm:text-[48px] lg:text-[58px]">
+          <h1 className="text-[32px] font-extrabold leading-[1.02] tracking-[-1.5px] text-[#0b1e18] drop-shadow-[0_3px_0_rgba(255,255,255,0.8)] sm:text-[44px] sm:tracking-[-2px] lg:text-[58px] lg:leading-[0.98]">
             Learn Today.
             <br />
             <span className="relative inline-block text-[#3c755c] [text-shadow:0_3px_0_rgba(49,92,70,0.28)]">
               Achieve Tomorrow.
               {/* Orange underline */}
-              <span className="absolute -bottom-2 left-[20%] h-[3px] w-[75%] rotate-[-1deg] rounded-full bg-[#ed7200]" />
+              <span className="absolute -bottom-1.5 left-[20%] h-[2.5px] w-[75%] rotate-[-1deg] rounded-full bg-[#ed7200] sm:-bottom-2 sm:h-[3px]" />
             </span>
           </h1>
 
@@ -273,21 +273,21 @@ export default function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="mx-auto mt-7 max-w-[520px] text-xs leading-5 text-[#111] sm:text-sm">
+          <p className="mx-auto mt-5 max-w-[520px] px-2 text-xs leading-5 text-[#111] sm:mt-7 sm:px-0 sm:text-sm">
             Expert guidance, personalized learning, and proven
             <br className="hidden sm:block" />
             strategies to help students achieve their academic and career goals.
           </p>
 
-          {/* CTA */}
-          <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
-            <button className="group rounded-full border border-[#db5e00] bg-[#ed7200] px-6 py-2.5 text-xs font-bold text-white shadow-[0_8px_0_#c85800,0_16px_28px_rgba(237,114,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#d96600] hover:shadow-[0_10px_0_#b94900,0_20px_32px_rgba(237,114,0,0.32)] active:scale-95">
+          {/* CTA Buttons */}
+          <div className="mt-5 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:px-0">
+            <button className="group w-full rounded-full border border-[#db5e00] bg-[#ed7200] px-6 py-2.5 text-xs font-bold text-white shadow-[0_6px_0_#c85800,0_12px_22px_rgba(237,114,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#d96600] hover:shadow-[0_10px_0_#b94900,0_20px_32px_rgba(237,114,0,0.32)] active:scale-95 sm:w-auto sm:shadow-[0_8px_0_#c85800,0_16px_28px_rgba(237,114,0,0.28)]">
               <span className="inline-block transition-transform group-hover:scale-110">
                 Book a Free Demo
               </span>
             </button>
 
-            <button className="group rounded-full border-2 border-[#13251f] bg-white/60 px-6 py-2.5 text-xs font-bold text-[#13251f] shadow-[0_8px_0_rgba(19,37,31,0.18)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#13251f] hover:text-white hover:shadow-[0_10px_0_rgba(19,37,31,0.28)] active:scale-95">
+            <button className="group w-full rounded-full border-2 border-[#13251f] bg-white/60 px-6 py-2.5 text-xs font-bold text-[#13251f] shadow-[0_6px_0_rgba(19,37,31,0.18)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#13251f] hover:text-white hover:shadow-[0_10px_0_rgba(19,37,31,0.28)] active:scale-95 sm:w-auto sm:shadow-[0_8px_0_rgba(19,37,31,0.18)]">
               <span className="inline-block transition-transform group-hover:scale-110">
                 Explore Courses
               </span>
@@ -304,12 +304,16 @@ export default function HeroSection() {
             pointer-events-none
             absolute
             -left-10
-            top-[400px]
+            top-[320px]
             z-10
             hidden
-            h-[160px]
+            h-[120px]
             w-[calc(100%+80px)]
-            lg:block
+            sm:top-[360px]
+            md:block
+            md:h-[140px]
+            lg:top-[400px]
+            lg:h-[160px]
           "
         >
           <svg
@@ -381,7 +385,7 @@ export default function HeroSection() {
 
         <div
           ref={leftImageRef}
-          className="absolute left-[8%] top-[275px] z-20 hidden w-[210px] rotate-[-4deg] lg:block xl:w-[245px]"
+          className="absolute left-[2%] top-[290px] z-20 hidden w-[170px] rotate-[-4deg] md:block lg:left-[8%] lg:top-[275px] lg:w-[210px] xl:w-[245px]"
         >
           <div className="relative">
             <div className="absolute -inset-[8px] rounded-[18px] bg-[#d6e8d5] blur-md" />
@@ -391,34 +395,34 @@ export default function HeroSection() {
                 alt="Student"
                 width={700}
                 height={700}
-                className="h-[185px] w-full object-cover xl:h-[195px]"
+                className="h-[140px] w-full object-cover lg:h-[185px] xl:h-[195px]"
               />
             </div>
           </div>
 
           {/* Book Shape */}
-          <div className="relative mx-auto -mt-3 h-9 w-[225px] rounded-b-[50%] border-[4px] border-[#111] bg-white shadow-[0_10px_0_rgba(17,17,17,0.12)] xl:w-[245px]">
+          <div className="relative mx-auto -mt-3 h-7 w-[180px] rounded-b-[50%] border-[4px] border-[#111] bg-white shadow-[0_10px_0_rgba(17,17,17,0.12)] lg:h-9 lg:w-[225px] xl:w-[245px]">
             <div className="absolute bottom-0 left-0 h-[4px] w-full bg-[#ed7200]" />
           </div>
         </div>
 
         {/* ================================================= */}
-        {/*                    CENTER IMAGE                   */}
+        {/*                   CENTER IMAGE                    */}
         {/* ================================================= */}
 
         <div
           ref={centerImageRef}
-          className="relative z-20 mx-auto mt-8 w-full max-w-[320px] sm:max-w-[350px] lg:mt-8 lg:max-w-[370px]"
+          className="relative z-20 mx-auto mt-6 w-full max-w-[260px] sm:max-w-[320px] md:max-w-[340px] lg:mt-8 lg:max-w-[370px]"
         >
           <div className="relative">
-            <div className="absolute -inset-[10px] rounded-[28px] bg-[#d7e9ce] blur-lg" />
-            <div className="relative overflow-hidden rounded-[22px] border-[4px] border-white bg-white shadow-[0_26px_45px_rgba(19,37,31,0.2)]">
+            <div className="absolute -inset-[8px] rounded-[24px] bg-[#d7e9ce] blur-md sm:-inset-[10px] sm:rounded-[28px] sm:blur-lg" />
+            <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white bg-white shadow-[0_18px_30px_rgba(19,37,31,0.2)] sm:rounded-[22px] sm:border-[4px] sm:shadow-[0_26px_45px_rgba(19,37,31,0.2)]">
               <Image
                 src="/herosection/girl.png"
                 alt="Bright Academy student"
                 width={700}
                 height={700}
-                className="h-[280px] w-full object-cover sm:h-[310px] lg:h-[325px]"
+                className="h-[230px] w-full object-cover sm:h-[280px] md:h-[310px] lg:h-[325px]"
               />
             </div>
           </div>
@@ -426,7 +430,7 @@ export default function HeroSection() {
           {/* Left Branch */}
           <div
             ref={(el) => (branchesRef.current[0] = el)}
-            className="absolute -left-10 bottom-[-5px] hidden text-4xl lg:block"
+            className="absolute -left-7 bottom-[-5px] hidden text-2xl sm:-left-10 sm:text-3xl lg:block lg:text-4xl"
           >
             🌿
           </div>
@@ -434,32 +438,36 @@ export default function HeroSection() {
           {/* Right Branch */}
           <div
             ref={(el) => (branchesRef.current[1] = el)}
-            className="absolute -right-10 bottom-[-5px] hidden rotate-[-10deg] text-4xl lg:block"
+            className="absolute -right-7 bottom-[-5px] hidden rotate-[-10deg] text-2xl sm:-right-10 sm:text-3xl lg:block lg:text-4xl"
           >
             🌿
           </div>
         </div>
 
         {/* ================================================= */}
-        {/*                    RIGHT IMAGE                    */}
+        {/*                   RIGHT IMAGE                     */}
         {/* ================================================= */}
 
         <div
           ref={rightImageRef}
-          className="absolute right-[8%] top-[280px] z-20 hidden lg:block"
+          className="absolute right-[2%] top-[290px] z-20 hidden md:block lg:right-[8%] lg:top-[280px]"
         >
           <div className="relative">
-            <div className="absolute -inset-[10px] rounded-[40%] bg-[#f9d8a9] blur-md" />
+            <div className="absolute -inset-[8px] rounded-[40%] bg-[#f9d8a9] blur-md sm:-inset-[10px]" />
             <div
               className="
-                relative flex h-[220px] w-[250px]
+                relative flex h-[170px] w-[190px]
                 items-center justify-center
                 overflow-hidden
                 rounded-t-[50%]
                 rounded-b-[45%]
-                border-[4px] border-[#397558]
+                border-[3px] border-[#397558]
                 bg-white
-                shadow-[0_24px_38px_rgba(57,117,88,0.16)]
+                shadow-[0_18px_28px_rgba(57,117,88,0.16)]
+                sm:h-[190px] sm:w-[210px]
+                lg:h-[220px] lg:w-[250px]
+                lg:border-[4px]
+                lg:shadow-[0_24px_38px_rgba(57,117,88,0.16)]
               "
             >
               <Image
@@ -472,14 +480,14 @@ export default function HeroSection() {
             </div>
 
             {/* Orange Dots */}
-            <span className="absolute -left-4 top-[50%] h-4 w-4 rounded-full border-2 border-black bg-[#ed7200] shadow-[0_0_0_3px_rgba(237,114,0,0.18)]" />
+            <span className="absolute -left-3 top-[50%] h-3 w-3 rounded-full border border-black bg-[#ed7200] shadow-[0_0_0_2px_rgba(237,114,0,0.18)] lg:-left-4 lg:h-4 lg:w-4 lg:border-2 lg:shadow-[0_0_0_3px_rgba(237,114,0,0.18)]" />
 
-            <span className="absolute -right-4 top-[45%] h-4 w-4 rounded-full border-2 border-black bg-[#ed7200] shadow-[0_0_0_3px_rgba(237,114,0,0.18)]" />
+            <span className="absolute -right-3 top-[45%] h-3 w-3 rounded-full border border-black bg-[#ed7200] shadow-[0_0_0_2px_rgba(237,114,0,0.18)] lg:-right-4 lg:h-4 lg:w-4 lg:border-2 lg:shadow-[0_0_0_3px_rgba(237,114,0,0.18)]" />
           </div>
         </div>
 
         {/* ================================================= */}
-        {/*                 DECORATIVE ELEMENTS               */}
+        {/*               DECORATIVE ELEMENTS                 */}
         {/* ================================================= */}
 
         <div ref={decorativeElementsRef}>
@@ -505,7 +513,7 @@ export default function HeroSection() {
 
         {/* ================= BOTTOM CTA ================= */}
 
-        <div className="relative z-30 flex justify-center pb-8 lg:absolute lg:bottom-3 lg:right-10">
+        <div className="relative z-30 flex justify-center py-6 sm:py-8 lg:absolute lg:bottom-3 lg:right-10 lg:py-0">
           <button className="group rounded-full border border-[#dfe9d7] bg-white/90 px-5 py-2.5 text-xs font-semibold text-[#11251d] shadow-[0_8px_0_rgba(17,37,29,0.08),0_16px_28px_rgba(17,37,29,0.09)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_0_rgba(17,37,29,0.08),0_18px_32px_rgba(17,37,29,0.12)] active:scale-95">
             <span className="inline-block transition-transform group-hover:scale-110">
               Start Learning Today 🌱
